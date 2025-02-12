@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyword Display</title>
+  <style>
+    /* Basic styling similar to the React inline styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: lightskyblue;
+    }
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    #result strong {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter a Keyword</h2>
+    <!-- Input field for typing the keyword -->
+    <input type="text" id="keywordInput" placeholder="Type here..." />
+    <!-- Div to display the result -->
+    <div id="result">
+      <strong>Result:</strong> <span id="resultText"></span>
+    </div>
+  </div>
+
+  <script>
+    // Get references to the input element and the result text span
+    const input = document.getElementById('keywordInput');
+    const resultText = document.getElementById('resultText');
+
+    // Listen for input events and update the result text immediately
+    input.addEventListener('input', function(event) {
+      resultText.textContent = event.target.value;
+    });
+  </script>
+</body>
+</html>
